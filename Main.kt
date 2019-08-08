@@ -7,10 +7,10 @@ class AutosamplerTest {
             autosampler.calibrateNeedle()
             Thread.sleep(2000)
 
-            autosampler.chooseVial(0)  // Arm home
+            autosampler.chooseVial(0)   // Arm home
             Thread.sleep(5000)
 
-            autosampler.chooseVial(21)  // Locate tray and arm to vial 25
+            autosampler.chooseVial(21)  // Locate tray and arm to vial 21
             print("Vial is ${autosampler.vial}")
             print("Vial choosing - ${autosampler.vialChoosing}")
             Thread.sleep(5000)
