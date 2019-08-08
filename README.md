@@ -1,5 +1,7 @@
 # Autosampler serial protocol Rev. 1.02
 
+## High level mode
+
 Autosampler works as a finite state machine. All variables unsigned. Protocol is based on DOMP (Device Object Manager Protocol).
 
 When turned on autosampler is in State = 101, preparing to become ready State = 0.
@@ -60,3 +62,31 @@ B8 2.WashCycles	[int] 		Number of cycles
 B9 3.ShakingMode	[int]		Specify shaking mode
 
 B10 3.ShakingDuration
+
+
+## Low level commands
+
+Low level commands will work only when B1 State == [0, 100, 102] calling low-level command will change state to State = 102.
+
+Arm, Tray - “E”
+Variable	Name				Type	Units	Description
+
+E1		Vial				[int]	-	Move tray and arm
+
+Set E1			Choose vial
+```
+0		Go home. E1 = [0, 41] Will not work if needle F1 != 0
+1-40		Go to position 1-40
+999		Got to washing
+10001		Recalibrate
+10002  Abort
+```
+Get E1			Read current vial or state
+```
+0		Not moving at home
+1-40		Not moving and vial is 1-40
+999		Not moving on washing
+20000-20040	Moving home or to vial 1-40
+20999		Moving to wash
+1000x		Error occurred
+```
