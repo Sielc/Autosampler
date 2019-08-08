@@ -12,14 +12,14 @@ Variable  Name		 Type		  Description
 
 B1        State		[int]		 Describes current operation autosampler performs
 ```
- 0 - Ready
-11 - Tray + Arm moving
-12 - Needle down
-13 - Syringe 
-14 - Home (Needle up, Arm back, Needle down)
-15 - Injection Start (Valve rotated)
-16 - Getting Ready (Valve back and needle up)
-21 - Washing
+  0 - Ready
+ 11 - Tray + Arm moving
+ 12 - Needle down
+ 13 - Syringe 
+ 14 - Home (Needle up, Arm back, Needle down)
+ 15 - Injection Start (Valve rotated)
+ 16 - Getting Ready (Valve back and needle up)
+ 21 - Washing
 100 - Error occurred, ErrorCode = [what happened], waits for Command=0
 101 - Getting ready when initializing or after aborted command. Finishes in State = 0
 102 - Low level command was executed, use B3 = 0 to get ready
@@ -75,18 +75,18 @@ E1		Vial				[int]	-	Move tray and arm
 
 Set E1			Choose vial
 ```
-0		Go home. E1 = [0, 41] Will not work if needle F1 != 0
-1-40		Go to position 1-40
-999		Got to washing
-10001		Recalibrate
-10002  Abort
+0       Go home. E1 = [0, 41] Will not work if needle F1 != 0
+1-40		  Go to position 1-40
+999		   Got to washing
+10001		 Recalibrate
+10002   Abort
 ```
 Get E1			Read current vial or state
 ```
-0		Not moving at home
-1-40		Not moving and vial is 1-40
-999		Not moving on washing
+0		     Not moving at home
+1-40		  Not moving and vial is 1-40
+999		   Not moving on washing
 20000-20040	Moving home or to vial 1-40
-20999		Moving to wash
-1000x		Error occurred
+20999		 Moving to wash
+1000x		 Error occurred
 ```
