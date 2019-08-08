@@ -75,18 +75,18 @@ E1		Vial				[int]	-	Move tray and arm
 
 Set E1			Choose vial
 ```
-0       Go home. E1 = [0, 41] Will not work if needle F1 != 0
-1-40		  Go to position 1-40
+0        Go home. E1 = [0, 41] Will not work if needle F1 != 0
+1-40		 Go to position 1-40
 999		   Got to washing
-10001		 Recalibrate
-10002   Abort
+10001    Recalibrate
+10002    Abort
 ```
 Get E1			Read current vial or state
 ```
-0		     Not moving at home
-1-40		  Not moving and vial is 1-40
-999		   Not moving on washing
-20000-20040	Moving home or to vial 1-40
-20999		 Moving to wash
-1000x		 Error occurred
+0         Not moving at home
+1-40      Not moving and vial is 1-40
+999       Not moving on washing
+20000-20040 Moving home or to vial 1-40
+20999		  Moving to wash
+1000x	    Error occurred
 ```
