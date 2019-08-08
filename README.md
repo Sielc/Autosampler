@@ -1,5 +1,7 @@
 # Autosampler serial protocol Rev. 1.02
 
+[.PDF full description](Protocol.pdf)
+
 ## High level mode
 
 Autosampler works as a finite state machine. All variables unsigned. Protocol is based on DOMP (Device Object Manager Protocol).
