@@ -1,5 +1,5 @@
 # Autosampler serial protocol Rev. 1.02
-Autosampler works as a finite state machine. All variables unsigned. Protocol is based on DOMP (Device Object Manager Protocol).`
+Autosampler works as a finite state machine. All variables unsigned. Protocol is based on DOMP (Device Object Manager Protocol).
 
 When turned on autosampler is in State = 101, preparing to become ready State = 0.
 Information parameters
